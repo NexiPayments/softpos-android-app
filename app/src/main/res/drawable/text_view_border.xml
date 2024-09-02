@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+    <stroke
+        android:width="2dp"
+        android:color="#EEEEEE" /> <!-- Cambia il colore del bordo secondo le tue esigenze -->
+    <corners android:radius="4dp" /> <!-- Arrotonda gli angoli, opzionale -->
+    <solid android:color="#FFFFFF" />
+    <padding
+        android:bottom="4dp"
+        android:left="4dp"
+        android:right="4dp"
+        android:top="4dp" /> <!-- Padding interno, opzionale -->
+</shape>

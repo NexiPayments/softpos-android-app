@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pizza Pay</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">ACCEDI</string>
+    <string name="invalid_username">Email non valida</string>
+    <string name="invalid_password">La password dev\'essere lunga almeno 5 caratteri</string>
+    <string name="login_failed">Login fallito</string>
+    <string name="checkout_backbutton_contentDescription">Checkout Back Button</string>
+    <string name="checkout_customerData">Dati Cliente</string>
+    <string name="checkout_name_text_field">Nome cognome</string>
+    <string name="checkout_address_text_field">Indirizzo</string>
+    <string name="checkout_mail_text_field">Email</string>
+    <string name="checkout_phone_text_field">Numero di telefono</string>
+    <string name="checkout_debug_data_title">Configurazione pagamento</string>
+    <string name="payment_success_text_1">Pagamento avvenuto con successo</string>
+    <string name="payment_success_text_2">Stiamo impastando con amore la tua pizza. Ti notificheremo quando il rider prenderà in consegna il tuo ordine.</string>
+    <string name="payment_success_text_3">STORNA TRANSAZIONE</string>
+    <string name="payment_failed_text_1">Pagamento fallito</string>
+    <string name="payment_result_text_1">Codice transazione</string>
+    <string name="revert_success_text_1">Storno avvenuto con successo</string>
+    <string name="revert_failed_text_1">Storno fallito</string>
+    <string name="debug_title">Debug</string>
+    <string name="revert_text_1">Impossibile recuperare la configurazione</string>
+    <string name="revert_text_2">Impossibile effettuare lo storno</string>
+    <string name="send_ticket_switch_label">Mostra bottone \"INVIA RICEVUTA\"</string>
+    <string name="url_ticket_switch_label">Invia l\'URL dello scontrino in risposta</string>
+</resources>

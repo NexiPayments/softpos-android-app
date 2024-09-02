@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="my_light_primary">#FE724C</color>
+    <color name="light_text">#9796A1</color>
+    <color name="title_dark">#272D2F</color>
+    <color name="app_background">#FDF6F5</color>
+    <color name="card_title_text_color">#000000</color>
+    <color name="card_description_text_color">#5B5B5E</color>
+</resources>
