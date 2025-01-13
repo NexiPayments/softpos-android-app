@@ -1,6 +1,5 @@
 package com.example.pizzapay.data
 
-import android.util.Log
 import com.example.pizzapay.data.model.LoggedInUser
 
 class LoginRepository(val dataSource: LoginDataSource) {

@@ -45,11 +45,18 @@ class CheckoutFragment : Fragment() {
         binding.checkoutProceedToPayment.setEnabled(false)
 
         // Initialize SDK, that will be used for payment operation
-        val app2app =
-            NexiApp2App().getApp2App(activity as FragmentActivity, sessionId, username, fun() {
+        val app2appContainer =
+            NexiApp2App().getApp2App(activity as FragmentActivity, view, sessionId, username, fun() {
                 // Enable payment button when the SDK is connected
                 binding.checkoutProceedToPayment.setEnabled(true)
             })
+
+        if (app2appContainer?.configResponse != null) {
+            binding.pointOfSaleContainer.text =
+                app2appContainer.configResponse.android_app_user_config.point_of_sale
+            binding.terminalIdContainer.text =
+                app2appContainer.configResponse.android_app_user_config.terminal_id_softpos
+        }
 
         cartViewModel = ViewModelProvider(
             activity as FragmentActivity, CartViewModelFactory()
@@ -67,7 +74,7 @@ class CheckoutFragment : Fragment() {
         }
 
         binding.checkoutProceedToPayment.setOnClickListener {
-            if (app2app != null) {
+            if (app2appContainer?.app2AppIPC != null) {
                 binding.debugTitle.visibility = View.GONE
                 binding.debugContainer.visibility = View.GONE
 
@@ -81,9 +88,12 @@ class CheckoutFragment : Fragment() {
 
                 // Start payment operation
                 checkoutViewModel.pay(
-                    app2app,
+                    app2appContainer.app2AppIPC,
                     amount,
                     binding.checkoutEditTextName.text.toString(),
+                    binding.checkoutEditTextProvince.text.toString(),
+                    binding.checkoutEditTextCity.text.toString(),
+                    binding.checkoutEditTextPostalCode.text.toString(),
                     binding.checkoutEditTextPostalAddress.text.toString(),
                     binding.checkoutEditTextEmailAddress.text.toString(),
                     binding.checkoutEditTextPhoneAddress.text.toString(),

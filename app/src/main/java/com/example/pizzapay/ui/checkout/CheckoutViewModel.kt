@@ -21,6 +21,9 @@ class CheckoutViewModel() : ViewModel() {
         amount: Int,
         addInfo1: String,
         addInfo2: String,
+        addInfo3: String,
+        addInfo4: String,
+        addInfo5: String,
         email: String,
         sms: String,
         sendTicket: Boolean,
@@ -34,6 +37,9 @@ class CheckoutViewModel() : ViewModel() {
                 System.currentTimeMillis().toString(),
                 addInfo1,
                 addInfo2,
+                addInfo3,
+                addInfo4,
+                addInfo5,
                 email,
                 sms,
                 sendTicket,
@@ -48,6 +54,9 @@ class CheckoutViewModel() : ViewModel() {
         callerTrxId: String,
         addInfo1: String,
         addInfo2: String,
+        addInfo3: String,
+        addInfo4: String,
+        addInfo5: String,
         email: String,
         sms: String,
         sendTicket: Boolean,
@@ -62,9 +71,9 @@ class CheckoutViewModel() : ViewModel() {
             "PIZZA PAY", // String used to value the label of the "TORNA A ..." button
             addInfo1, // Transaction additional info
             addInfo2, // Transaction additional info
-            null, // Transaction additional info
-            null, // Transaction additional info
-            null, // Transaction additional info
+            addInfo3, // Transaction additional info
+            addInfo4, // Transaction additional info
+            addInfo5, // Transaction additional info
             email, // Customer email
             sms // Customer phone number
         )

@@ -13,6 +13,8 @@ import com.example.pizzapay.databinding.ActivityPaymentResultBinding
 
 class PaymentResultActivity : AppCompatActivity() {
 
+    private lateinit var rootView: View
+
     private lateinit var operationResultViewModel: OperationResultViewModel
 
     private lateinit var binding: ActivityPaymentResultBinding
@@ -24,6 +26,8 @@ class PaymentResultActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        rootView = findViewById(android.R.id.content)
+
         val spLogin = getSharedPreferences("login", MODE_PRIVATE)
 
         val sessionId = "" + spLogin.getString("session_id", "")
@@ -33,7 +37,7 @@ class PaymentResultActivity : AppCompatActivity() {
         binding.revertTransaction.setEnabled(false)
 
         // Initialize SDK, that will be used for revert operation
-        val app2app = NexiApp2App().getApp2App(this, sessionId, username, fun() {
+        val app2appContainer = NexiApp2App().getApp2App(this, rootView, sessionId, username, fun() {
             // Enable revert button when the SDK is connected
             binding.revertTransaction.setEnabled(true)
         })
@@ -43,10 +47,10 @@ class PaymentResultActivity : AppCompatActivity() {
         )[OperationResultViewModel::class.java]
 
         binding.revertTransaction.setOnClickListener {
-            if (app2app != null) {
+            if (app2appContainer?.app2AppIPC != null) {
                 // Start revert operation
                 operationResultViewModel.revert(
-                    app2app, // SDK object
+                    app2appContainer.app2AppIPC, // SDK object
                     intent.data?.getQueryParameter("amount")?.toInt() ?: 0,
                     intent.data?.getQueryParameter("terminalId") ?: ""
                 )

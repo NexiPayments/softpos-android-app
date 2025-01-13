@@ -8,7 +8,13 @@
     <string name="login_failed">Login fallito</string>
     <string name="checkout_backbutton_contentDescription">Checkout Back Button</string>
     <string name="checkout_customerData">Dati Cliente</string>
+    <string name="checkout_config_data_title">Configurazione</string>
+    <string name="checkout_point_of_sale">Punto vendita:</string>
+    <string name="checkout_terminal_id">Terminale:</string>
     <string name="checkout_name_text_field">Nome cognome</string>
+    <string name="checkout_province_text_field">Provincia</string>
+    <string name="checkout_city_text_field">Città</string>
+    <string name="checkout_postal_code_text_field">CAP</string>
     <string name="checkout_address_text_field">Indirizzo</string>
     <string name="checkout_mail_text_field">Email</string>
     <string name="checkout_phone_text_field">Numero di telefono</string>
